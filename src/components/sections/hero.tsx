@@ -1,15 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react'
-
+import { ChevronDown } from 'lucide-react'
+import { personalInfo } from '@/lib/constants'
 
 export function HeroSection() {
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/deepanshub9', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/deepanshub/', icon: Linkedin },
-    { name: 'Email', href: 'mailto:deepanshu.b096@gmail.com', icon: Mail },
-  ]
 
   const scrollToNext = () => {
     window.scrollTo({
@@ -52,7 +47,7 @@ export function HeroSection() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground"
             >
-              Deepanshu Bhardwaj
+              {personalInfo.name}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -100,32 +95,7 @@ export function HeroSection() {
             </button>
           </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex items-center justify-center space-x-6"
-          >
-            {socialLinks.map((link, index) => {
-              const Icon = link.icon
-              return (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 p-3 rounded-full hover:bg-muted/50"
-                  aria-label={link.name}
-                >
-                  <Icon className="w-6 h-6" />
-                </motion.a>
-              )
-            })}
-          </motion.div>
+
         </motion.div>
 
         {/* Scroll Indicator */}

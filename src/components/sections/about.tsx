@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { GitCommit, Users, Award, Coffee } from 'lucide-react'
 import { GitHubContribution } from '@/components/charts/github-contribution'
+import { personalInfo } from '@/lib/constants'
 
 export function AboutSection() {
   const stats = [
@@ -100,7 +101,7 @@ export function AboutSection() {
               <p className="text-muted-foreground mb-6 text-sm">
                 Real-time contribution graph showing my coding activity and project commits.
               </p>
-              <GitHubContribution username="yourusername" />
+              <GitHubContribution username={personalInfo.github} />
             </div>
 
             {/* Quick Links */}

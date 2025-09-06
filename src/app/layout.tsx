@@ -11,10 +11,16 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Your Name | DevOps Engineer',
-    template: '%s | Your Name'
+    default: 'Deepanshu Bhardwaj | DevOps Engineer',
+    template: '%s | Deepanshu Bhardwaj'
   },
   description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization. Building scalable, reliable systems.',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
+  metadataBase: new URL('https://deepanshub-portfolio.vercel.app'),
   keywords: [
     'DevOps Engineer',
     'Cloud Infrastructure',
@@ -25,15 +31,15 @@ export const metadata: Metadata = {
     'Terraform',
     'Infrastructure as Code'
   ],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  authors: [{ name: 'Deepanshu Bhardwaj' }],
+  creator: 'Deepanshu Bhardwaj',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourname.dev',
-    title: 'Your Name | DevOps Engineer',
+    url: 'https://deepanshub-portfolio.vercel.app',
+    title: 'Deepanshu Bhardwaj | DevOps Engineer',
     description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization.',
-    siteName: 'Your Name Portfolio',
+    siteName: 'Deepanshu Bhardwaj Portfolio',
     images: [{
       url: '/og-image.jpg',
       width: 1200,
@@ -42,10 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Your Name | DevOps Engineer',
+    title: 'Deepanshu Bhardwaj | DevOps Engineer',
     description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization.',
     images: ['/og-image.jpg'],
-    creator: '@yourusername',
+    creator: '@deepanshub',
   },
   robots: {
     index: true,
@@ -63,18 +69,18 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Your Name',
+  name: 'Deepanshu Bhardwaj',
   jobTitle: 'DevOps Engineer',
   description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization.',
-  url: 'https://yourname.dev',
+  url: 'https://deepanshub-portfolio.vercel.app',
   sameAs: [
-    'https://github.com/yourusername',
-    'https://linkedin.com/in/yourusername',
-    'https://twitter.com/yourusername',
+    'https://github.com/deepanshub9',
+    'https://linkedin.com/in/deepanshub',
+    'https://twitter.com/deepanshub',
   ],
   worksFor: {
     '@type': 'Organization',
-    name: 'Your Company',
+    name: 'Freelance',
   },
   knowsAbout: [
     'DevOps',

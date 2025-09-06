@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Moon, Sun, Menu, X, Github, Linkedin, Mail } from 'lucide-react'
+import { socialLinks, navigation as navItems, personalInfo } from '@/lib/constants'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,20 +16,7 @@ export function Navigation() {
     setMounted(true)
   }, [])
 
-  const navigation = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blogs', href: '#blogs' },
-    { name: 'Contact', href: '#contact' },
-  ]
-
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/deepanshub9', icon: Github },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/deepanshub/', icon: Linkedin },
-    { name: 'Email', href: 'mailto:deepanshu.b096@gmail.com', icon: Mail },
-  ]
+  const iconMap = { Github, Linkedin, Mail }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     e.preventDefault()
@@ -60,14 +48,14 @@ export function Navigation() {
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img 
               src="/logo.png" 
-              alt="Deepanshu Bhardwaj" 
+              alt={personalInfo.name} 
               className="h-16 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={(e) => {
@@ -83,7 +71,7 @@ export function Navigation() {
           {/* Social Links & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((link) => {
-              const Icon = link.icon
+              const Icon = iconMap[link.icon as keyof typeof iconMap]
               return (
                 <a
                   key={link.name}
@@ -142,7 +130,7 @@ export function Navigation() {
             className="md:hidden border-t border-border bg-background/95 backdrop-blur-md"
           >
             <div className="px-4 py-6 space-y-4">
-              {navigation.map((item) => (
+              {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={(e) => {
@@ -155,7 +143,7 @@ export function Navigation() {
               ))}
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
                 {socialLinks.map((link) => {
-                  const Icon = link.icon
+                  const Icon = iconMap[link.icon as keyof typeof iconMap]
                   return (
                     <a
                       key={link.name}

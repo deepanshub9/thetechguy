@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 import { personalInfo } from '@/lib/constants'
 
@@ -17,26 +17,14 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-      
-      if (response.ok) {
-        alert('Message sent successfully!')
-        setFormData({ name: '', email: '', message: '' })
-      } else {
-        alert('Failed to send message. Please try again.')
-      }
-    } catch {
-      alert('Failed to send message. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
+    // For static hosting, redirect to email
+    const subject = `Portfolio Contact: ${formData.name}`
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    
+    window.location.href = mailtoLink
+    setIsSubmitting(false)
+    setFormData({ name: '', email: '', message: '' })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -65,11 +53,6 @@ export function ContactSection() {
       value: personalInfo.location,
       href: 'https://maps.google.com/?q=Waterford+Ireland'
     }
-  ]
-
-  const contactSocialLinks = [
-    { name: 'GitHub', href: `https://github.com/${personalInfo.github}`, icon: Github },
-    { name: 'LinkedIn', href: `https://linkedin.com/in/${personalInfo.linkedin}`, icon: Linkedin },
   ]
 
   return (
@@ -136,8 +119,6 @@ export function ContactSection() {
                 )
               })}
             </div>
-
-
           </motion.div>
 
           {/* Contact Form */}
@@ -201,17 +182,8 @@ export function ContactSection() {
                 disabled={isSubmitting}
                 className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                    <span>Sending...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-5 w-5" />
-                    <span>Send Message</span>
-                  </>
-                )}
+                <Send className="h-5 w-5" />
+                <span>Send Message</span>
               </button>
             </form>
           </motion.div>

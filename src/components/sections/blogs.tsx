@@ -6,30 +6,30 @@ import { useState, useEffect } from 'react'
 import { personalInfo } from '@/lib/constants'
 
 export function BlogsSection() {
-  const [blogs, setBlogs] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await fetch('/api/blogs')
-        const data = await response.json()
-        
-        if (data.success) {
-          setBlogs(data.blogs.slice(0, 4)) // Show only 4 latest blogs
-        } else {
-          setError('Failed to load blogs')
-        }
-      } catch (err) {
-        setError('Failed to load blogs')
-      } finally {
-        setLoading(false)
-      }
+  const [blogs] = useState([
+    {
+      id: 1,
+      title: 'DevOps Best Practices for Modern Applications',
+      description: 'Learn essential DevOps practices that can transform your development workflow and improve deployment reliability.',
+      url: `https://dev.to/${personalInfo.devto}`,
+      publishedAt: '2024-01-15',
+      tags: ['devops', 'ci-cd', 'automation'],
+      readingTime: 8,
+      publicReactions: 42,
+      coverImage: null
+    },
+    {
+      id: 2,
+      title: 'Kubernetes Security: A Comprehensive Guide',
+      description: 'Explore security best practices for Kubernetes clusters, from RBAC to network policies and beyond.',
+      url: `https://dev.to/${personalInfo.devto}`,
+      publishedAt: '2024-01-10',
+      tags: ['kubernetes', 'security', 'containers'],
+      readingTime: 12,
+      publicReactions: 38,
+      coverImage: null
     }
-
-    fetchBlogs()
-  }, [])
+  ])
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -37,45 +37,6 @@ export function BlogsSection() {
       month: 'short',
       day: 'numeric'
     })
-  }
-
-  if (loading) {
-    return (
-      <section id="blogs" className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Latest Blog Posts
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Sharing insights on DevOps, Cloud, and Software Engineering
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="animate-pulse">
-                <div className="bg-muted rounded-lg h-48 mb-4"></div>
-                <div className="h-4 bg-muted rounded mb-2"></div>
-                <div className="h-4 bg-muted rounded w-3/4"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (error) {
-    return (
-      <section id="blogs" className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Latest Blog Posts
-          </h2>
-          <p className="text-muted-foreground">{error}</p>
-        </div>
-      </section>
-    )
   }
 
   return (
@@ -106,16 +67,6 @@ export function BlogsSection() {
               viewport={{ once: true }}
               className="bg-background border border-border rounded-lg overflow-hidden hover:border-primary/20 transition-colors duration-200 group"
             >
-              {blog.coverImage && (
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={blog.coverImage}
-                    alt={blog.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                  />
-                </div>
-              )}
-              
               <div className="p-6 space-y-4">
                 <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                   <div className="flex items-center space-x-1">
