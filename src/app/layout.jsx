@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -6,10 +5,11 @@ import { Navigation } from '@/components/layout/navigation'
 import { Footer } from '@/components/layout/footer'
 import { Toaster } from 'react-hot-toast'
 import { Analytics } from '@vercel/analytics/react'
+import { ClientWrapper } from '@/components/client-wrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: {
     default: 'Your Name | DevOps Engineer',
     template: '%s | Your Name'
@@ -88,11 +88,7 @@ const jsonLd = {
   ],
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -101,29 +97,31 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen bg-background antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col">
-            <Navigation />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <Toaster
-            position="bottom-right"
-            toastOptions={{
-              duration: 4000,
-              className: 'dark:bg-gray-800 dark:text-white',
-            }}
-          />
-          <Analytics />
-        </ThemeProvider>
+      <body className={`${inter.className} min-h-screen bg-background antialiased`} suppressHydrationWarning={true}>
+        <ClientWrapper>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="flex min-h-screen flex-col">
+              <Navigation />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <Toaster
+              position="bottom-right"
+              toastOptions={{
+                duration: 4000,
+                className: 'dark:bg-gray-800 dark:text-white',
+              }}
+            />
+            <Analytics />
+          </ThemeProvider>
+        </ClientWrapper>
       </body>
     </html>
   );

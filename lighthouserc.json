@@ -1,0 +1,33 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "http://localhost:3000",
+        "http://localhost:3000/about",
+        "http://localhost:3000/projects",
+        "http://localhost:3000/architecture",
+        "http://localhost:3000/blog"
+      ],
+      "startServerCommand": "npm run start",
+      "startServerReadyPattern": "ready on",
+      "startServerReadyTimeout": 30000,
+      "numberOfRuns": 3
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", {"minScore": 0.85}],
+        "categories:accessibility": ["error", {"minScore": 0.95}],
+        "categories:best-practices": ["warn", {"minScore": 0.90}],
+        "categories:seo": ["error", {"minScore": 0.95}],
+        "categories:pwa": ["warn", {"minScore": 0.80}]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "server": {
+      "port": 9001,
+      "host": "0.0.0.0"
+    }
+  }
+}
