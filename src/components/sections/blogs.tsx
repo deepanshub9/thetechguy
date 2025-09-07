@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Calendar, Clock, Heart } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { personalInfo } from '@/lib/constants'
 
 export function BlogsSection() {

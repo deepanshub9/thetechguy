@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, TrendingUp } from 'lucide-react'
-import Link from 'next/link'
+
 
 export function ProjectsSection() {
   const featuredProjects = [

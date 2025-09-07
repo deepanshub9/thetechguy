@@ -67,10 +67,7 @@ export function ContactSection() {
     }
   ]
 
-  const contactSocialLinks = [
-    { name: 'GitHub', href: `https://github.com/${personalInfo.github}`, icon: Github },
-    { name: 'LinkedIn', href: `https://linkedin.com/in/${personalInfo.linkedin}`, icon: Linkedin },
-  ]
+
 
   return (
     <section id="contact" className="py-24 bg-muted/30">

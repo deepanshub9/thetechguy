@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Moon, Sun, Menu, X, Github, Linkedin, Mail } from 'lucide-react'
@@ -46,9 +47,11 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img 
+            <Image 
               src="/logo.png" 
               alt={personalInfo.name} 
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
           </Link>
