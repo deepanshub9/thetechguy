@@ -82,7 +82,7 @@ export default function BlogsPage() {
     }
   ])
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
