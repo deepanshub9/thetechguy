@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 import { personalInfo } from '@/lib/constants'
 
@@ -67,10 +67,7 @@ export function ContactSection() {
     }
   ]
 
-  const contactSocialLinks = [
-    { name: 'GitHub', href: `https://github.com/${personalInfo.github}`, icon: Github },
-    { name: 'LinkedIn', href: `https://linkedin.com/in/${personalInfo.linkedin}`, icon: Linkedin },
-  ]
+
 
   return (
     <section id="contact" className="py-24 bg-muted/30">

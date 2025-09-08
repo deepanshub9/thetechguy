@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
+import { ExternalLink, Github, TrendingUp } from 'lucide-react'
+
 
 export function ProjectsSection() {
   const featuredProjects = [
@@ -168,7 +169,21 @@ export function ProjectsSection() {
           ))}
         </div>
 
-
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/projects"
+            className="inline-flex items-center space-x-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+          >
+            <span>View All Projects</span>
+            <ExternalLink className="w-5 h-5" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

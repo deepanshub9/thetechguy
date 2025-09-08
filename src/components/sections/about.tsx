@@ -49,7 +49,7 @@ export function AboutSection() {
                 let teams focus on what they do best.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Over the past 5+ years, I&apos;ve specialized in cloud infrastructure, 
+                Over the past 3+ years, I&apos;ve specialized in cloud infrastructure, 
                 containerization, and CI/CD automation. I believe in infrastructure as code, 
                 monitoring everything, and building systems that scale gracefully under pressure.
               </p>

@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization. Building scalable, reliable systems.',
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/logo.png',
   },
   metadataBase: new URL('https://deepanshub-portfolio.vercel.app'),

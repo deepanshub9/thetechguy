@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { ExternalLink, Calendar, Clock, Heart } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { personalInfo } from '@/lib/constants'
 
 export function BlogsSection() {
@@ -31,7 +32,7 @@ export function BlogsSection() {
     }
   ])
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -121,17 +122,15 @@ export function BlogsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center mt-12 space-x-4"
         >
-          <a
-            href={`https://dev.to/${personalInfo.devto}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/blogs"
             className="inline-flex items-center space-x-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
           >
-            <span>View All Posts</span>
+            <span>View All Blogs</span>
             <ExternalLink className="w-5 h-5" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
