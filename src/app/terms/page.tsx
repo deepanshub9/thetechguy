@@ -31,7 +31,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using Deepanshu Bhardwaj's DevOps Portfolio website, you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using Deepanshu Bhardwaj&apos;s DevOps Portfolio website, you accept and agree to be bound by the terms and provision of this agreement.
               </p>
             </section>
 
@@ -51,7 +51,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">Portfolio Content</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                This website showcases Deepanshu Bhardwaj's professional work and projects in DevOps and cloud infrastructure. The content includes:
+                This website showcases Deepanshu Bhardwaj&apos;s professional work and projects in DevOps and cloud infrastructure. The content includes:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>Project descriptions and technical implementations</li>
@@ -91,7 +91,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">Disclaimer</h2>
               <p className="text-muted-foreground leading-relaxed">
-                The information on this website is provided on an 'as is' basis. To the fullest extent permitted by law, we exclude all representations, warranties, and conditions relating to our website and the use of this website.
+                The information on this website is provided on an &apos;as is&apos; basis. To the fullest extent permitted by law, we exclude all representations, warranties, and conditions relating to our website and the use of this website.
               </p>
             </section>
 

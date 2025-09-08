@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
+import { useRouter, usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Moon, Sun, Menu, X, Github, Linkedin, Mail } from 'lucide-react'
 import { socialLinks, navigation as navItems, personalInfo } from '@/lib/constants'
@@ -12,6 +13,8 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
@@ -23,6 +26,17 @@ export function Navigation() {
     e.preventDefault()
     setIsOpen(false)
     
+    // If we're not on the home page, navigate to home first
+    if (pathname !== '/') {
+      if (href === '#hero') {
+        router.push('/')
+      } else {
+        router.push('/' + href)
+      }
+      return
+    }
+    
+    // If we're on home page, scroll to section
     if (href === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return

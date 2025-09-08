@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Welcome to Deepanshu Bhardwaj's DevOps Portfolio. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.
+                Welcome to Deepanshu Bhardwaj&apos;s DevOps Portfolio. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.
               </p>
             </section>
 
