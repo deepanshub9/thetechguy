@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { useRouter, usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Moon, Sun, Menu, X, Github, Linkedin, Mail } from 'lucide-react'
+import { Moon, Sun, Menu, X, Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import { socialLinks, navigation as navItems, personalInfo } from '@/lib/constants'
 
 export function Navigation() {
@@ -20,7 +20,7 @@ export function Navigation() {
     setMounted(true)
   }, [])
 
-  const iconMap = { Github, Linkedin, Mail }
+  const iconMap = { Github, Linkedin, Twitter, Mail }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     e.preventDefault()

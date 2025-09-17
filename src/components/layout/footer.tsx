@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
 import { socialLinks, navigation as navItems, personalInfo } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
-  const iconMap = { Github, Linkedin, Mail }
+  const iconMap = { Github, Linkedin, Twitter, Mail }
   const quickLinks = navItems.slice(1) // Remove 'Home' from quick links
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
