@@ -88,7 +88,7 @@ export default function ProjectsPage() {
       : allProjects.filter(project => project.category === selectedCategory)
     
     return filtered.sort((a, b) => {
-      if (sortBy === 'featured') return b.featured - a.featured
+      if (sortBy === 'featured') return Number(b.featured) - Number(a.featured)
       if (sortBy === 'name') return a.title.localeCompare(b.title)
       return 0
     })
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
     currentPage * projectsPerPage
   )
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page: number) => {
     setCurrentPage(page)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
