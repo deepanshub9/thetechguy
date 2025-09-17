@@ -45,7 +45,7 @@ export function ProjectsSection() {
       impact: 'Demonstrates proficiency in modern React development and frontend best practices',
       tech: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Responsive Design', 'Component Architecture'],
       githubUrl: 'https://github.com/deepanshub9/React-Assignment',
-      featured: false
+      featured: true
     },
     {
       title: 'AWS Node.js HTTP API Project',
@@ -79,7 +79,7 @@ export function ProjectsSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.filter(p => p.featured).slice(0, 4).map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}

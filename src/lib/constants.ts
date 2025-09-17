@@ -1,6 +1,7 @@
 export const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/deepanshub9', icon: 'Github' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/deepanshub/', icon: 'Linkedin' },
+  { name: 'Twitter', href: 'https://x.com/realthetechguy', icon: 'Twitter' },
   { name: 'Email', href: 'mailto:deepanshub.8010@gmail.com', icon: 'Mail' },
 ]
 

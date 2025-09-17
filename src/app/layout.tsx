@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Deepanshu Bhardwaj | DevOps Engineer',
     description: 'DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and containerization.',
     images: ['/og-image.jpg'],
-    creator: '@deepanshub',
+    creator: '@realthetechguy',
   },
   robots: {
     index: true,
@@ -76,7 +76,7 @@ const jsonLd = {
   sameAs: [
     'https://github.com/deepanshub9',
     'https://linkedin.com/in/deepanshub',
-    'https://twitter.com/deepanshub',
+    'https://x.com/realthetechguy',
   ],
   worksFor: {
     '@type': 'Organization',
