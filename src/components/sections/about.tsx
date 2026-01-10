@@ -7,9 +7,9 @@ import { personalInfo } from '@/lib/constants'
 
 export function AboutSection() {
   const stats = [
-    { icon: GitCommit, label: 'Projects Deployed', value: '55+' },
-    { icon: Users, label: 'Followers', value: '6' },
-    { icon: Award, label: 'Years Experience', value: '3+' },
+    { icon: GitCommit, label: 'Projects Deployed', value: '68+' },
+    { icon: Users, label: 'Followers', value: '8+' },
+    { icon: Award, label: 'Years Experience', value: '4+' },
     { icon: Coffee, label: 'Coffee Consumed', value: '∞' },
   ]
 
@@ -49,7 +49,7 @@ export function AboutSection() {
                 let teams focus on what they do best.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Over the past 3+ years, I&apos;ve specialized in cloud infrastructure, 
+                Over the past 4+ years, I&apos;ve specialized in cloud infrastructure, 
                 containerization, and CI/CD automation. I believe in infrastructure as code, 
                 monitoring everything, and building systems that scale gracefully under pressure.
               </p>

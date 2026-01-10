@@ -109,8 +109,8 @@ export default function TermsOfService() {
               </p>
               <div className="bg-muted/30 border border-border rounded-lg p-4">
                 <p className="text-foreground font-medium">Deepanshu Bhardwaj</p>
-                <p className="text-muted-foreground">Email: deepanshub.8010@gmail.com</p>
-                <p className="text-muted-foreground">Location: Waterford, Ireland</p>
+                <p className="text-muted-foreground">Email: deep.ie96@gmail.com</p>
+                <p className="text-muted-foreground">Location: Dublin, Ireland</p>
                 <p className="text-muted-foreground">GitHub: github.com/deepanshub9</p>
                 <p className="text-muted-foreground">LinkedIn: linkedin.com/in/deepanshub</p>
               </div>

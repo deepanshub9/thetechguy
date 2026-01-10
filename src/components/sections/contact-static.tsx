@@ -51,7 +51,7 @@ export function ContactSection() {
       icon: MapPin,
       label: 'Location',
       value: personalInfo.location,
-      href: 'https://maps.google.com/?q=Waterford+Ireland'
+      href: 'https://maps.google.com/?q=Dublin+Ireland'
     }
   ]
 
