@@ -10,24 +10,35 @@ export function BlogsSection() {
   const [blogs] = useState([
     {
       id: 1,
-      title: 'DevOps Best Practices for Modern Applications',
-      description: 'Learn essential DevOps practices that can transform your development workflow and improve deployment reliability.',
-      url: `https://dev.to/${personalInfo.devto}`,
-      publishedAt: '2024-01-15',
-      tags: ['devops', 'ci-cd', 'automation'],
-      readingTime: 8,
-      publicReactions: 42,
+      title: 'Building a Production-Grade E-Commerce Platform on GCP: A Complete DevOps Journey',
+      description: 'A comprehensive guide to building and deploying a complete e-commerce platform on Google Cloud Platform using modern DevOps practices including GKE, ArgoCD, Terraform, GitHub Actions, Datadog, and SonarQube.',
+      url: 'https://dev.to/deepanshub09/building-a-production-grade-e-commerce-platform-on-gcp-a-complete-devops-journey-4lj4',
+      publishedAt: '2026-01-09',
+      tags: ['kubernetes', 'gcp', 'devops', 'microservices', 'gitops'],
+      readingTime: 25,
+      publicReactions: 6,
       coverImage: null
     },
     {
       id: 2,
-      title: 'Kubernetes Security: A Comprehensive Guide',
-      description: 'Explore security best practices for Kubernetes clusters, from RBAC to network policies and beyond.',
-      url: `https://dev.to/${personalInfo.devto}`,
-      publishedAt: '2024-01-10',
-      tags: ['kubernetes', 'security', 'containers'],
-      readingTime: 12,
-      publicReactions: 38,
+      title: 'Building a Complete AWS VPC with Load Balancer: A Step-by-Step Journey',
+      description: 'A comprehensive guide to building a full AWS Virtual Private Cloud (VPC) with an Application Load Balancer (ALB), EC2 instances, and more while sharing every stumble and how to fix them.',
+      url: 'https://dev.to/deepanshub09/building-a-complete-aws-vpc-with-load-balancer-a-step-by-step-journey-2oj8',
+      publishedAt: '2025-10-04',
+      tags: ['devops', 'aws', 'cloud', 'networking'],
+      readingTime: 15,
+      publicReactions: 5,
+      coverImage: null
+    },
+    {
+      id: 3,
+      title: 'The OSI Model Explained: Your Complete Guide to Network Communication',
+      description: 'Ever wondered how your message travels from your phone to your friend\'s computer across the globe? Let\'s dive into the fascinating world of network communication through the OSI model!',
+      url: 'https://dev.to/deepanshub09/the-osi-model-explained-your-complete-guide-to-network-communication-512a',
+      publishedAt: '2025-09-23',
+      tags: ['webdev', 'devops', 'cloud', 'networking'],
+      readingTime: 10,
+      publicReactions: 6,
       coverImage: null
     }
   ])
@@ -58,7 +69,7 @@ export function BlogsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
             <motion.article
               key={blog.id}

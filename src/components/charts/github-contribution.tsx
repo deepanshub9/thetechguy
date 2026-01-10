@@ -15,7 +15,7 @@ interface ContributionDay {
 
 export function GitHubContribution({ username }: GitHubContributionProps) {
   const [contributions, setContributions] = useState<ContributionDay[]>([])
-  const [totalContributions, setTotalContributions] = useState(0)
+  const [totalContributions, setTotalContributions] = useState(323) // Updated from GitHub profile
   const [loading, setLoading] = useState(true)
 
   // Generate mock data for demonstration

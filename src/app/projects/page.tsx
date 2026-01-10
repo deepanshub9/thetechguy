@@ -13,6 +13,17 @@ export default function ProjectsPage() {
 
   const allProjects = [
     {
+      title: 'Production-Grade E-Commerce Microservices Platform on GCP',
+      description: 'Cloud-native e-commerce platform with 5 microservices (Java, Go, Node.js) deployed on Google Kubernetes Engine (GKE) using modern DevOps practices including GitOps, full observability, and automated CI/CD.',
+      problem: 'Building a production-ready microservices platform with proper orchestration, monitoring, security, and automated deployments on GCP',
+      solution: 'Implemented complete DevOps stack with Terraform for infrastructure, ArgoCD for GitOps, GitHub Actions for CI/CD, Datadog for monitoring, SonarQube for code quality, and Kubernetes for orchestration',
+      impact: 'Achieved fully automated deployment pipeline with zero-downtime deployments, complete observability, security-first approach, and production-grade reliability',
+      tech: ['GCP', 'GKE', 'Terraform', 'ArgoCD', 'GitHub Actions', 'Datadog', 'SonarQube', 'Kubernetes', 'Helm', 'Java', 'Go', 'Node.js', 'MySQL'],
+      githubUrl: 'https://github.com/deepanshub9/Microservice-Ecom-Store-K8s',
+      category: 'DevOps',
+      featured: true
+    },
+    {
       title: 'Spring Boot Banking Application - DevSecOps on AWS EKS',
       description: 'Comprehensive, secure banking web application built with Spring Boot, featuring modern web technologies and enterprise-grade security with complete DevSecOps pipeline.',
       problem: 'Building a production-ready banking application with automated security scanning and deployment',
@@ -65,7 +76,7 @@ export default function ProjectsPage() {
       tech: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Responsive Design', 'Component Architecture'],
       githubUrl: 'https://github.com/deepanshub9/React-Assignment',
       category: 'DevOps',
-      featured: true
+      featured: false
     },
     {
       title: 'AWS Node.js HTTP API Project',
