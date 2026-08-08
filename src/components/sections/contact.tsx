@@ -56,14 +56,14 @@ export function ContactSection() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+353 (89) 123-4567',
-      href: 'tel:+353891234567'
+      value: personalInfo.phone,
+      href: personalInfo.phoneHref
     },
     {
       icon: MapPin,
       label: 'Location',
       value: personalInfo.location,
-      href: 'https://maps.google.com/?q=Waterford+Ireland'
+      href: 'https://maps.google.com/?q=Dublin+Ireland'
     }
   ]
 

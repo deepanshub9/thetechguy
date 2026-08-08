@@ -34,7 +34,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{personalInfo.name}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              DevOps Engineer passionate about automating infrastructure, 
+              Cloud Engineer passionate about automating infrastructure, 
               streamlining delivery pipelines, and building scalable cloud solutions 
               with DevSecOps best practices.
             </p>

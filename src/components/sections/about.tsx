@@ -7,9 +7,9 @@ import { personalInfo } from '@/lib/constants'
 
 export function AboutSection() {
   const stats = [
-    { icon: GitCommit, label: 'Projects Deployed', value: '55+' },
-    { icon: Users, label: 'Followers', value: '6' },
-    { icon: Award, label: 'Years Experience', value: '3+' },
+    { icon: GitCommit, label: 'Projects Deployed', value: '68+' },
+    { icon: Users, label: 'Followers', value: '8+' },
+    { icon: Award, label: 'Years Experience', value: '4+' },
     { icon: Coffee, label: 'Coffee Consumed', value: '∞' },
   ]
 
@@ -27,8 +27,8 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate DevOps engineer with a proven track record of transforming 
-            development workflows and infrastructure reliability.
+            Azure-focused DevOps engineer at Central Bank of Ireland, building secure,
+            reliable platforms with strong delivery discipline and automation.
           </p>
         </motion.div>
 
@@ -43,20 +43,22 @@ export function AboutSection() {
           >
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                My journey into DevOps began with a simple frustration: watching developers 
-                waste hours on deployment issues instead of building amazing features. 
-                This sparked my passion for creating seamless, automated workflows that 
-                let teams focus on what they do best.
+                My current work is heavily Azure-centric. At Central Bank of Ireland, I
+                focus on Event Hub streaming, Service Bus messaging, Logic App automation,
+                API Gateway style integrations, and private networking patterns that keep
+                regulated workloads secure and observable.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Over the past 3+ years, I&apos;ve specialized in cloud infrastructure, 
-                containerization, and CI/CD automation. I believe in infrastructure as code, 
-                monitoring everything, and building systems that scale gracefully under pressure.
+                Over the past 4+ years, I&apos;ve specialized in cloud infrastructure,
+                containerization, and CI/CD automation, with most of my recent delivery
+                time spent in Azure. I still value the lessons from my earlier DWS work,
+                especially around operational discipline, but my portfolio now leans much
+                more toward Azure architecture and platform engineering.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I&apos;m not optimizing deployment pipelines, you&apos;ll find me contributing 
-                to open-source projects, writing about DevOps best practices, or exploring 
-                the latest cloud technologies.
+                When I&apos;m not designing cloud platforms, you&apos;ll find me contributing to
+                open-source projects, refining delivery pipelines, or exploring the latest
+                Azure capabilities that improve reliability and security.
               </p>
             </div>
 
@@ -110,7 +112,7 @@ export function AboutSection() {
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>🎯 Specialized in AWS, Kubernetes, and Terraform</span>
+                  <span>🎯 Specialized in Azure, Kubernetes, and Terraform</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -123,6 +125,14 @@ export function AboutSection() {
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <span>🔒 Security-first approach with automated compliance</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>☁️ Event Hub, Service Bus, Logic Apps, Private Endpoints, and API gateways</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>🏦 Azure delivery aligned with Central Bank of Ireland operations</span>
                 </li>
               </ul>
             </div>

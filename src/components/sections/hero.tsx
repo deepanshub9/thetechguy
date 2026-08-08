@@ -1,10 +1,21 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import { personalInfo } from '@/lib/constants'
 
 export function HeroSection() {
+  const roleVariants = ['DevOps', 'Cloud', 'SRE']
+  const [roleIndex, setRoleIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setRoleIndex((current) => (current + 1) % roleVariants.length)
+    }, 1800)
+
+    return () => window.clearInterval(interval)
+  }, [])
 
   const scrollToNext = () => {
     window.scrollTo({
@@ -29,15 +40,7 @@ export function HeroSection() {
           className="space-y-8"
         >
           {/* Status Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center space-x-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium border border-green-500/20"
-          >
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span>Available for new opportunities</span>
-          </motion.div>
+          {/* Status badge removed as requested */}
 
           {/* Main Heading */}
           <div className="space-y-4">
@@ -53,9 +56,23 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium"
+              className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium"
             >
-              DevOps Engineer | Cloud Enthusiast | Open Source Contributor
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-5 py-2 shadow-sm">
+                <span className="relative inline-flex min-w-[6ch] justify-center overflow-hidden font-semibold text-foreground">
+                  <motion.span
+                    key={roleVariants[roleIndex]}
+                    initial={{ opacity: 0, y: 18, filter: 'blur(4px)' }}
+                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    transition={{ duration: 0.45, ease: 'easeOut' }}
+                    className="bg-gradient-to-r from-primary via-sky-500 to-cyan-400 bg-clip-text text-transparent"
+                  >
+                    {roleVariants[roleIndex]}
+                  </motion.span>
+                </span>
+                <span className="text-muted-foreground">Engineer</span>
+              </span>
+              <span className="text-muted-foreground/80">| Cloud Enthusiast | Open Source Contributor</span>
             </motion.p>
           </div>
 

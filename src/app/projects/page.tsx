@@ -13,74 +13,118 @@ export default function ProjectsPage() {
 
   const allProjects = [
     {
+      title: 'Azure Secure Infrastructure',
+      description: 'Azure-focused cloud foundation with private networking, secure workload placement, and delivery patterns for regulated environments.',
+      problem: 'Designing a secure Azure landing zone that supports private-by-default application delivery and controlled access boundaries',
+      solution: 'Used Terraform, Azure networking constructs, private endpoints, and governance-oriented infrastructure patterns to create a secure base',
+      impact: 'Improved platform consistency, security posture, and delivery readiness for Azure workloads',
+      tech: ['Azure', 'Terraform', 'Private Endpoint', 'Networking', 'Governance', 'Security', 'Infrastructure as Code'],
+      githubUrl: 'https://github.com/deepanshub9/Azure-Secure-Infrastructure',
+      category: 'Azure',
+      featured: true
+    },
+    {
+      title: 'FinOps Azure Infrastructure',
+      description: 'Cloud cost management and optimization initiative focused on Azure visibility, governance, and practical FinOps workflows.',
+      problem: 'Helping teams understand cloud spend and act on cost optimisation opportunities without slowing delivery',
+      solution: 'Built a Python-based Azure cost visibility workflow with clear reporting and operational guardrails',
+      impact: 'Improved cost awareness and created a foundation for better Azure spend decisions',
+      tech: ['Azure', 'Python', 'FinOps', 'Governance', 'Reporting', 'Automation'],
+      githubUrl: 'https://github.com/deepanshub9/FinOps-Azure-Infrastructure',
+      category: 'Azure',
+      featured: true
+    },
+    {
+      title: 'Secure Bank Platform',
+      description: 'Enterprise-style Azure platform engineering work aligned with banking expectations and secure delivery practices.',
+      problem: 'Creating a bank-friendly cloud platform that balances security, compliance, and delivery speed',
+      solution: 'Applied Azure platform engineering patterns, Terraform-based provisioning, and secure operational design',
+      impact: 'Delivered a stronger foundation for regulated workload delivery and platform consistency',
+      tech: ['Azure', 'Terraform', 'Security', 'Platform Engineering', 'Networking', 'Compliance'],
+      githubUrl: 'https://github.com/deepanshub9/Secure-Bank-Platform',
+      category: 'Azure',
+      featured: true
+    },
+    {
+      title: 'Azure DevOps Zero to Hero',
+      description: 'A curated Azure DevOps learning and reference repository covering practical delivery patterns, pipelines, and team workflows.',
+      problem: 'Keeping Azure DevOps knowledge organized across hands-on examples, notes, and reusable workflow patterns',
+      solution: 'Structured a reference collection around Azure DevOps tasks, notes, and implementation examples',
+      impact: 'Makes Azure delivery practices easier to reuse across projects and teams',
+      tech: ['Azure DevOps', 'Azure', 'Automation', 'Pipelines', 'Documentation', 'Shell'],
+      githubUrl: 'https://github.com/deepanshub9/AzureDevOps-Zero-to-Hero',
+      category: 'Azure',
+      featured: true
+    },
+    {
+      title: 'Cloud Incident Tracker',
+      description: 'A hands-on learning project for simulating incidents, monitoring response, and validating recovery in cloud environments.',
+      problem: 'Practicing the full incident lifecycle in a safe, repeatable way for cloud operations',
+      solution: 'Created an incident workflow with tracking, response, and recovery validation steps',
+      impact: 'Improves operational readiness and incident response discipline',
+      tech: ['Azure', 'Incident Response', 'Automation', 'Observability', 'Operations'],
+      githubUrl: 'https://github.com/deepanshub9/Cloud-Incident-Tracker',
+      category: 'Azure',
+      featured: false
+    },
+    {
+      title: 'Terraform Full Course Azure',
+      description: 'Azure-focused Terraform learning material that maps infrastructure concepts to practical cloud delivery patterns.',
+      problem: 'Keeping Azure Terraform knowledge practical and easy to reuse across environments',
+      solution: 'Used course-driven examples and hands-on IaC patterns to reinforce Azure provisioning workflows',
+      impact: 'Supports faster onboarding and more consistent Azure infrastructure practices',
+      tech: ['Azure', 'Terraform', 'Infrastructure as Code', 'HCL', 'Learning'],
+      githubUrl: 'https://github.com/deepanshub9/Terraform-Full-Course-Azure',
+      category: 'Azure',
+      featured: false
+    },
+    {
       title: 'Spring Boot Banking Application - DevSecOps on AWS EKS',
-      description: 'Comprehensive, secure banking web application built with Spring Boot, featuring modern web technologies and enterprise-grade security with complete DevSecOps pipeline.',
+      description: 'A secure banking-style application with a complete DevSecOps pipeline deployed on AWS EKS.',
       problem: 'Building a production-ready banking application with automated security scanning and deployment',
       solution: 'Implemented DevSecOps pipeline with Jenkins, SonarQube, OWASP, Snyk, ArgoCD on AWS EKS',
       impact: 'Complete CI/CD automation with security-first approach and container orchestration',
       tech: ['Spring Boot', 'Java', 'Jenkins', 'SonarQube', 'OWASP', 'Snyk', 'ArgoCD', 'AWS EKS', 'Kubernetes', 'Helm', 'Terraform'],
       githubUrl: 'https://github.com/deepanshub9/Springboot-BankApp',
-      category: 'DevOps',
+      category: 'AWS',
       featured: true
     },
     {
       title: 'Three-Tier Application Deployment on AWS EKS',
-      description: 'End-to-end deployment of a Three-Tier Web Application using ReactJS, NodeJS, and MongoDB on AWS EKS with complete DevOps automation.',
+      description: 'End-to-end deployment of a three-tier application using ReactJS, NodeJS, and MongoDB on AWS EKS.',
       problem: 'Deploying complex multi-tier applications with proper orchestration and monitoring',
       solution: 'Used Terraform for infrastructure, Jenkins for CI/CD, EKS for orchestration, and Helm for monitoring',
       impact: 'Scalable microservices architecture with automated deployment and monitoring',
       tech: ['React', 'Node.js', 'MongoDB', 'Terraform', 'Jenkins', 'AWS EKS', 'Helm', 'Prometheus', 'Grafana', 'ArgoCD'],
       githubUrl: 'https://github.com/deepanshub9/Three-tier-app-deployment',
-      category: 'DevOps',
+      category: 'AWS',
       featured: true
     },
     {
       title: 'Multi-Environment Infrastructure with Terraform & Ansible',
-      description: 'Robust Infrastructure as Code solution that provisions and manages multi-environment AWS infrastructure using Terraform modules and automates application deployment with Ansible.',
+      description: 'Multi-environment AWS infrastructure provisioning and application deployment automation.',
       problem: 'Managing consistent infrastructure across multiple environments with configuration automation',
       solution: 'Modular Terraform for infrastructure provisioning and Ansible for configuration management',
       impact: 'Consistent, repeatable deployments across dev, staging, and production environments',
       tech: ['Terraform', 'Ansible', 'AWS', 'Python', 'Bash', 'Infrastructure as Code', 'Configuration Management'],
       githubUrl: 'https://github.com/deepanshub9/multi_env_lac_terraform_ansible',
-      category: 'DevOps',
-      featured: true
-    },
-    {
-      title: 'ML Pipeline - End-to-End MLOps Solution',
-      description: 'Complete MLOps pipeline implementing machine learning model training, validation, and deployment with automated CI/CD for ML workflows.',
-      problem: 'Building scalable ML pipelines with automated model training, validation, and deployment',
-      solution: 'Implemented MLOps pipeline with automated data processing, model training, validation, and deployment using modern ML tools',
-      impact: 'Streamlined ML workflow with automated model lifecycle management and continuous integration',
-      tech: ['Python', 'MLflow', 'Docker', 'Kubernetes', 'Apache Airflow', 'TensorFlow', 'Scikit-learn', 'CI/CD', 'Model Registry'],
-      githubUrl: 'https://github.com/deepanshub9/software-operations/tree/main/MLOps/ml%20pipeline',
-      category: 'AI/MLOps',
-      featured: true
-    },
-    {
-      title: 'React Assignment - Modern Frontend Application',
-      description: 'Modern React application showcasing component-based architecture, state management, and responsive design principles with clean, maintainable code.',
-      problem: 'Building a scalable React application with modern development practices',
-      solution: 'Implemented React with hooks, context API, and responsive design using modern CSS frameworks',
-      impact: 'Demonstrates proficiency in modern React development and frontend best practices',
-      tech: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Responsive Design', 'Component Architecture'],
-      githubUrl: 'https://github.com/deepanshub9/React-Assignment',
-      category: 'DevOps',
-      featured: true
+      category: 'AWS',
+      featured: false
     },
     {
       title: 'AWS Node.js HTTP API Project',
-      description: 'Serverless HTTP API built with Node.js and deployed on AWS, demonstrating cloud-native development and serverless architecture patterns.',
+      description: 'Serverless HTTP API built with Node.js and deployed on AWS, useful as a cross-cloud comparison project.',
       problem: 'Creating a scalable, cost-effective API solution using serverless architecture',
       solution: 'Built Node.js API with AWS Lambda, API Gateway, and other AWS services for serverless deployment',
       impact: 'Highly scalable and cost-effective API solution with automatic scaling and pay-per-use pricing',
       tech: ['Node.js', 'AWS Lambda', 'API Gateway', 'Serverless', 'JavaScript', 'AWS Services'],
       githubUrl: 'https://github.com/deepanshub9/aws-node-http-api-project',
-      category: 'DevOps',
+      category: 'AWS',
       featured: false
     }
   ]
 
-  const categories = ['All', 'DevOps', 'AI/MLOps']
+  const categories = ['All', 'Azure', 'AWS', 'DevOps', 'AI/MLOps']
 
   const filteredAndSortedProjects = useMemo(() => {
     const filtered = selectedCategory === 'All' 
@@ -124,7 +168,8 @@ export default function ProjectsPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-foreground mb-4">All Projects</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Complete collection of DevOps solutions, MLOps pipelines, and cloud-native applications.
+              A portfolio shaped around Azure and AWS platform engineering, with a smaller
+              set of DevOps and learning projects for context.
             </p>
           </div>
 

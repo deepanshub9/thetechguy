@@ -79,8 +79,8 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold text-foreground mb-4">Contact</h2>
               <div className="bg-muted/30 border border-border rounded-lg p-4">
                 <p className="text-foreground font-medium">Deepanshu Bhardwaj</p>
-                <p className="text-muted-foreground">Email: deepanshub.8010@gmail.com</p>
-                <p className="text-muted-foreground">Location: Waterford, Ireland</p>
+                <p className="text-muted-foreground">Email: deep.ie96@gmail.com</p>
+                <p className="text-muted-foreground">Location: Dublin, Ireland</p>
               </div>
             </section>
           </div>
