@@ -124,7 +124,7 @@ export default function ProjectsPage() {
     }
   ]
 
-  const categories = ['All', 'Azure', 'AWS', 'DevOps', 'AI/MLOps']
+  const categories = ['All', 'Azure', 'AWS']
 
   const filteredAndSortedProjects = useMemo(() => {
     const filtered = selectedCategory === 'All' 
