@@ -13,6 +13,8 @@ export const personalInfo = {
   name: "Deepanshu Bhardwaj",
   title: "DevOps Engineer",
   email: "deep.ie96@gmail.com",
+  phone: "+353 89 699 987",
+  phoneHref: "tel:+35389699987",
   location: "Dublin, Ireland",
   github: "deepanshub9",
   linkedin: "deepanshub",
