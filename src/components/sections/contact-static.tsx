@@ -44,8 +44,8 @@ export function ContactSection() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+353 (89) 123-4567',
-      href: 'tel:+353891234567'
+      value: personalInfo.phone,
+      href: personalInfo.phoneHref
     },
     {
       icon: MapPin,
